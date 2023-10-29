@@ -30,11 +30,11 @@ struct ARViewContainer: UIViewRepresentable {
         let sphere = ModelEntity(mesh: MeshResource.generateSphere(radius: 0.3), materials: [SimpleMaterial(color: .yellow, isMetallic: true)])
         let plane = ModelEntity(mesh: MeshResource.generatePlane(width: 0.5, depth: 0.3), materials: [SimpleMaterial(color: .green, isMetallic: true)])
         
-        let text = ModelEntity(mesh: MeshResource.generateText("Amr Magdy", extrusionDepth: 0.03, font: .systemFont(ofSize: 0.2), containerFrame: .zero, alignment: .center, lineBreakMode: .byCharWrapping), materials: [SimpleMaterial(color: .white, isMetallic: true)])
+        let text = ModelEntity(mesh: MeshResource.generateText("Tap on an object to change color", extrusionDepth: 0.03, font: .systemFont(ofSize: 0.2), containerFrame: .zero, alignment: .center, lineBreakMode: .byCharWrapping), materials: [SimpleMaterial(color: .white, isMetallic: true)])
         
         sphere.position = simd_make_float3(0, 0.4, 0)
         plane.position = simd_make_float3(0, 0.7, 0)
-        text.position = simd_make_float3(0.5, 0, 0)
+        text.position = simd_make_float3(0, 0.9, 0)
         
         box.generateCollisionShapes(recursive: true)
         sphere.generateCollisionShapes(recursive: true)
