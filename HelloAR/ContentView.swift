@@ -46,6 +46,11 @@ struct ARViewContainer: UIViewRepresentable {
         anchor.addChild(plane)
         anchor.addChild(text)
         
+        arView.installGestures(.all, for: box)
+        arView.installGestures(.all, for: sphere)
+        arView.installGestures(.all, for: plane)
+        arView.installGestures(.all, for: text)
+        
         arView.scene.anchors.append(anchor)
         return arView
         
