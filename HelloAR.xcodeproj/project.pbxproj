@@ -11,6 +11,8 @@
 		CFB54E732AEE962400E49689 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB54E722AEE962400E49689 /* ContentView.swift */; };
 		CFB54E752AEE962700E49689 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB54E742AEE962700E49689 /* Assets.xcassets */; };
 		CFB54E782AEE962700E49689 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFB54E772AEE962700E49689 /* Preview Assets.xcassets */; };
+		CFB54E7F2AEEA8E600E49689 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB54E7E2AEEA8E600E49689 /* Coordinator.swift */; };
+		CFB54E812AEEA9B700E49689 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB54E802AEEA9B700E49689 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		CFB54E722AEE962400E49689 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CFB54E742AEE962700E49689 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CFB54E772AEE962700E49689 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CFB54E7E2AEEA8E600E49689 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CFB54E802AEEA9B700E49689 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		CFB54E6F2AEE962400E49689 /* HelloAR */ = {
 			isa = PBXGroup;
 			children = (
+				CFB54E7E2AEEA8E600E49689 /* Coordinator.swift */,
 				CFB54E702AEE962400E49689 /* AppDelegate.swift */,
 				CFB54E722AEE962400E49689 /* ContentView.swift */,
 				CFB54E742AEE962700E49689 /* Assets.xcassets */,
 				CFB54E762AEE962700E49689 /* Preview Content */,
+				CFB54E802AEEA9B700E49689 /* UIColor+Extension.swift */,
 			);
 			path = HelloAR;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			files = (
 				CFB54E732AEE962400E49689 /* ContentView.swift in Sources */,
 				CFB54E712AEE962400E49689 /* AppDelegate.swift in Sources */,
+				CFB54E7F2AEEA8E600E49689 /* Coordinator.swift in Sources */,
+				CFB54E812AEEA9B700E49689 /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
