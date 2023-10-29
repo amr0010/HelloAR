@@ -9,7 +9,7 @@ import Foundation
 import ARKit
 import RealityKit
 
-class Coordinator: NSObject, ARSessionDelegate {
+class Coordinator: NSObject {
     weak var view: ARView?
     
     @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
@@ -21,18 +21,15 @@ class Coordinator: NSObject, ARSessionDelegate {
             let material = SimpleMaterial(color: UIColor.random, isMetallic: true)
             entity.model?.materials = [material]
         } else {
-            let results = view.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .vertical)
+            let results = view.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .vertical) + view.raycast(from: tapLocation, allowing: .estimatedPlane, alignment: .horizontal)
             
             if let result = results.first {
-                let anchor = ARAnchor(name: "Plane Anchor", transform: result.worldTransform)
-                view.session.add(anchor: anchor)
                 
+                let anchorEntity = AnchorEntity(raycastResult: result)
                 let material = SimpleMaterial(color: .red, isMetallic: true)
                 let box = ModelEntity(mesh: MeshResource.generateBox(size: 0.3) , materials: [material])
                 
-                let anchorEntity = AnchorEntity(anchor: anchor)
                 anchorEntity.addChild(box)
-                
                 view.scene.addAnchor(anchorEntity)
             }
         }
