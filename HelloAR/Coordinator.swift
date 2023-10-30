@@ -26,10 +26,12 @@ class Coordinator: NSObject {
             if let result = results.first {
                 
                 let anchorEntity = AnchorEntity(raycastResult: result)
-                let material = SimpleMaterial(color: .red, isMetallic: true)
-                let box = ModelEntity(mesh: MeshResource.generateBox(size: 0.3) , materials: [material])
-                
-                anchorEntity.addChild(box)
+//                let material = SimpleMaterial(color: .red, isMetallic: true)
+//                let box = ModelEntity(mesh: MeshResource.generateBox(size: 0.3) , materials: [material])
+                guard let modelEntity = try? ModelEntity.loadModel(named: "chair") else {
+                    fatalError("chair model not found")
+                }
+                anchorEntity.addChild(modelEntity)
                 view.scene.addAnchor(anchorEntity)
             }
         }
