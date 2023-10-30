@@ -8,9 +8,11 @@
 import Foundation
 import ARKit
 import RealityKit
+import Combine
 
 class Coordinator: NSObject {
     weak var view: ARView?
+    var cancellable: AnyCancellable?
     
     @objc func handleTap(_ recognizer: UITapGestureRecognizer) {
         guard let view = self.view else { return }
@@ -26,12 +28,23 @@ class Coordinator: NSObject {
             if let result = results.first {
                 
                 let anchorEntity = AnchorEntity(raycastResult: result)
-//                let material = SimpleMaterial(color: .red, isMetallic: true)
-//                let box = ModelEntity(mesh: MeshResource.generateBox(size: 0.3) , materials: [material])
-                guard let modelEntity = try? ModelEntity.loadModel(named: "chair") else {
-                    fatalError("chair model not found")
-                }
-                anchorEntity.addChild(modelEntity)
+                
+                cancellable = ModelEntity.loadAsync(named: "chair")
+                    .append(ModelEntity.loadAsync(named: "tv"))
+                    .collect()
+                    .sink(receiveCompletion: { completion in
+                    if case let .failure(error) = completion {
+                        print("unable to load model \(error.localizedDescription)")
+                    }
+                }, receiveValue: { entities in
+                    var x: Float = 0.0
+                    entities.forEach { entity in
+                        entity.position = simd_make_float3(x, 0, 0)
+                        x += 0.3
+                        anchorEntity.addChild(entity)
+                    }
+                    
+                })
                 view.scene.addAnchor(anchorEntity)
             }
         }

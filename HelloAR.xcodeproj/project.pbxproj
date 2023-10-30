@@ -14,6 +14,7 @@
 		CFB54E7F2AEEA8E600E49689 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB54E7E2AEEA8E600E49689 /* Coordinator.swift */; };
 		CFB54E812AEEA9B700E49689 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFB54E802AEEA9B700E49689 /* UIColor+Extension.swift */; };
 		CFB54E862AEF185F00E49689 /* chair.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFB54E852AEF185F00E49689 /* chair.usdz */; };
+		CFB54E882AEFD9BC00E49689 /* tv.usdz in Resources */ = {isa = PBXBuildFile; fileRef = CFB54E872AEFD9BC00E49689 /* tv.usdz */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		CFB54E7E2AEEA8E600E49689 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		CFB54E802AEEA9B700E49689 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		CFB54E852AEF185F00E49689 /* chair.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = chair.usdz; sourceTree = "<group>"; };
+		CFB54E872AEFD9BC00E49689 /* tv.usdz */ = {isa = PBXFileReference; lastKnownFileType = file.usdz; path = tv.usdz; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				CFB54E762AEE962700E49689 /* Preview Content */,
 				CFB54E802AEEA9B700E49689 /* UIColor+Extension.swift */,
 				CFB54E852AEF185F00E49689 /* chair.usdz */,
+				CFB54E872AEFD9BC00E49689 /* tv.usdz */,
 			);
 			path = HelloAR;
 			sourceTree = "<group>";
@@ -136,6 +139,7 @@
 			files = (
 				CFB54E862AEF185F00E49689 /* chair.usdz in Resources */,
 				CFB54E782AEE962700E49689 /* Preview Assets.xcassets in Resources */,
+				CFB54E882AEFD9BC00E49689 /* tv.usdz in Resources */,
 				CFB54E752AEE962700E49689 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
